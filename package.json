@@ -4,8 +4,7 @@
   "description": "Restful node webservice with mongodb",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -13,10 +12,14 @@
   },
   "author": "Raunaq Arora",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.2"
+  "bugs":{
+    "url":"https://github.com/raunaqarora/RESTful-Node-with-MongoDB/issues"
   },
+  "homepage":"https://github.com/raunaqarora/RESTful-Node-with-MongoDB#readme",
   "devDependencies": {
     "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
   }
 }
