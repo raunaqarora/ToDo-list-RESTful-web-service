@@ -12,14 +12,16 @@
   },
   "author": "Raunaq Arora",
   "license": "ISC",
-  "bugs":{
-    "url":"https://github.com/raunaqarora/RESTful-Node-with-MongoDB/issues"
+  "bugs": {
+    "url": "https://github.com/raunaqarora/RESTful-Node-with-MongoDB/issues"
   },
-  "homepage":"https://github.com/raunaqarora/RESTful-Node-with-MongoDB#readme",
+  "homepage": "https://github.com/raunaqarora/RESTful-Node-with-MongoDB#readme",
   "devDependencies": {
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.15.2"
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3"
   }
 }
