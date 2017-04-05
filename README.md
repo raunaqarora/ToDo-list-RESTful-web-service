@@ -1,2 +1,2 @@
-# ToList RESTful webservice
+# ToDo List RESTful webservice
 Written in Node with MongoDB
