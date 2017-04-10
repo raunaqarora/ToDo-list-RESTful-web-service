@@ -1,2 +1,2 @@
-# ToDo List RESTful webservice
-Written in Node with MongoDB
+# ToDo List RESTful web service
+Written in Node with PostgreSQL
