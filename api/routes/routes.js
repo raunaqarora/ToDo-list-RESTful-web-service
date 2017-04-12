@@ -9,9 +9,16 @@ module.exports = (app) => {
 
   app.post('/rest/todos/create', todosController.create);
   app.get('/rest/todos/list', todosController.list);
-
-  app.post('/rest/todos/:todoId/items', todoItemsController.create);
   app.get('/rest/todos/:todoId', todosController.retreive);
   app.put('/rest/todos/:todoId', todosController.update);
   app.delete('/rest/todos/:todoId', todosController.deleteTodo);
+
+  app.post('/rest/todos/:todoId/items', todoItemsController.create);
+  app.put('/rest/todos/:todoId/items/:todoItemId', todoItemsController.update);
+  app.delete('/rest/todos/:todoId/items/:todoItemId', todoItemsController.deleteItem);
+
+  app.all('/rest/todos/*', (req, res) => res.status(405).send({
+      message: 'Method Not Allowed',
+  }));
+
 };
