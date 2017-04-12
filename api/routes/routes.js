@@ -1,16 +1,17 @@
 'use strict';
-module.exports = function(app) {
-  var control = require('../controllers/controller');
+const todosController = require('../controllers/controller').todos;
+const todoItemsController = require('../controllers/controller').todoItems;
 
+module.exports = (app) => {
+  app.get('/rest', (req, res) => res.status(200).send({
+    message: 'Welcome to the Todos API!',
+  }));
 
-  // todoList Routes
-  app.route('/tasks')
-    .get(control.list_all_tasks)
-    .post(control.create_a_task);
+  app.post('/rest/todos/create', todosController.create);
+  app.get('/rest/todos/list', todosController.list);
 
-
-  app.route('/tasks/:taskId')
-    .get(control.read_a_task)
-    .put(control.update_a_task)
-    .delete(control.delete_a_task);
+  app.post('/rest/todos/:todoId/items', todoItemsController.create);
+  app.get('/rest/todos/:todoId', todosController.retreive);
+  app.put('/rest/todos/:todoId', todosController.update);
+  app.delete('/rest/todos/:todoId', todosController.deleteTodo);
 };
